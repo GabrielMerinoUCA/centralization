@@ -1,0 +1,32 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+}
+
+.front-end-panel {
+    text-align: center;
+    display: block;
+    width: 250px;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.back-end-panel {
+    text-align: center;
+    display: block;
+    width: 250px;
+    height: 100%;
+    flex-grow: 1;
+}
