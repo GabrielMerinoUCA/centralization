@@ -1,12 +1,29 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
+}
+
+img {
+    position: absolute;
+    opacity: 0.3;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-  }
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+.img-container {
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+}
 
 .flex-container {
     display: flex;
@@ -15,18 +32,109 @@ a {
     height: 100%;
 }
 
+/* Front End*/
 .front-end-panel {
-    text-align: center;
     display: block;
+    position: relative;
     width: 250px;
     height: 100%;
     flex-grow: 1;
+    background-color: #2965f1;
 }
 
+.front-end-panel:hover {
+    background-color: #1f50c2;
+}
+
+.right-aligned {
+    background-color: white;
+    width: 35%;
+    margin-left: auto;
+    margin-top: 12vh;
+    padding: 15px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: 2px 3px 8px 0px rgb(65, 64, 64);
+}
+
+a:hover .right-aligned {
+    transform: scale(1.05);
+    /* Increase the size of the .box when hovering over the <a> tag */
+    background-color: rgb(219, 219, 219);
+}
+
+.front-end-header {
+    font-size: 60px;
+    font-family: 'Montserrat';
+}
+
+.wavy-thingy {
+    position: absolute;
+    height: 100vh;
+    width: 100px;
+    background-image: url('../assets/layered-waves-haikei.svg');
+}
+
+a:hover .wavy-thingy {
+    transform: scale(1.05);
+}
+
+/* Back End*/
 .back-end-panel {
-    text-align: center;
+    position: relative;
     display: block;
     width: 250px;
     height: 100%;
     flex-grow: 1;
+    background-color: #371151;
+}
+
+.back-end-panel:hover {
+    background-color: #451466;
+}
+
+.left-aligned {
+    background-color: #222222;
+    position: absolute;
+    width: 35%;
+    margin-right: auto;
+    bottom: 0;
+    margin-bottom: 12vh;
+    padding: 15px;
+    box-shadow: inset 0px 0px 5px 4px black;
+}
+
+.back-end-header {
+    font-size: 78px;
+    font-family: 'VT323';
+    color: rgb(0, 192, 0);
+}
+
+a:hover .back-end-header {
+    text-decoration: underline;
+    animation: text-blinker 0.9s ease 0.50s 1 normal;
+    color: rgb(0, 255, 0);
+}
+
+@keyframes text-blinker {
+    from {
+        text-decoration: none;
+        color: rgb(0, 192, 0);
+    }
+
+    25% {
+        text-decoration: underline;
+        color: rgb(0, 255, 0);
+    }
+
+    50% {
+        text-decoration: none;
+        color: rgb(0, 192, 0);
+    }
+
+    60% {
+        text-decoration: underline;
+        color: rgb(0, 255, 0);
+
+    }
 }
