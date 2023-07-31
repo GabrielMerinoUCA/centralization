@@ -16,14 +16,6 @@ h1 {
     text-align: center;
 }
 
-span {
-    border-bottom: #23232e 2px solid;
-}
-li {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 .main-content {
     margin-left: 20vw;
     padding: 20px;

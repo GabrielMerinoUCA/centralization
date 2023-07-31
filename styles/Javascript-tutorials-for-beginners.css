@@ -23,6 +23,7 @@ h1 {
 .content-table {
     margin-top: 3vh;
     padding: 5px;
+    height: auto;
     border: #33333a 2px solid;
     border-radius: 4px;
 }
