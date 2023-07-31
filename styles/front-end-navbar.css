@@ -1,0 +1,35 @@
+.navbar {
+    position: fixed;
+    display: inline;
+    width: 20vw;
+    height: 100vh;
+    background-color: #23232e;
+    box-shadow: inset -5px 0px 5px 0px rgb(24, 24, 24);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-flex-items {
+    color: rgb(206, 206, 206);
+    padding: 10px;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15%;
+    overflow: hidden;
+}
+
+.flex-header {
+    font-size: 45px;
+    text-align: center;
+    padding-left: 10px;
+    font-family: "Roboto Condensed";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

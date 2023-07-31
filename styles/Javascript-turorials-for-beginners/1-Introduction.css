@@ -1,8 +1,10 @@
 body {
     padding: 0;
     margin: 0;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(#f7df1e, #c9b100 100%);
+    font-size: 18px;
     font-family: "Raleway";
     overflow: hidden;
     color: #23232e;
@@ -11,29 +13,19 @@ body {
 h1 {
     margin: 0;
     font-size: 48px;
-    margin-left: 5%;
+    text-align: center;
+}
+
+span {
+    border-bottom: #23232e 2px solid;
+}
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .main-content {
     margin-left: 20vw;
     padding: 20px;
     height: 100vh;
-}
-
-.content-table {
-    margin-top: 3vh;
-    padding: 5px;
-    border: #33333a 2px solid;
-    border-radius: 4px;
-}
-
-.tutorial-chapters {
-    display: block;
-    padding: 5px;
-    font-size: 20px;
-}
-
-.tutorial-chapters:hover {
-    background-color: #c5b00d;
-    border-radius: 4px;
 }
