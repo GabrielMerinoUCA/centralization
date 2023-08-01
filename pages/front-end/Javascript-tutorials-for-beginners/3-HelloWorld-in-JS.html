@@ -6,6 +6,7 @@
     <title>Javascript</title>
 
     <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/3-HelloWorld-in-JS.css" type="text/css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,5 +31,47 @@
             </div>
         </div>
     </nav>
+    <main class="main-content">
+        <h1>III. Hello World! in Javascript</h1><br>
+        <div class="content-section">
+            <h2>3.1 Embedded Javascript</h2>
+            <p>Embedded javascript is essentially adding you javascript directly into the html page using a script tag.</p>
+            <p>It is a common practice to put embedded scripts (and scripts in general) at the bottom of the body element. This
+                allows the html to load first before the JS code executes; which can take time that could be instead spent loading 
+                the content so the user doesn't think the site is down or anything like that.
+            </p>
+            <p>This also lines up with the principle of not depending on JS for core functionality as if the JS code is loading last and presents
+                core functionality, the html won't work properly or at all.
+            </p>
+            <br><h2>3.2 Hello World!</h2><br>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . .<br>
+                <br>
+                <p class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Always at the bottom --&gt;</p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="language-feature">alert(</span><span class="custom-dev-creation">"Hello World!"</span><span class="language-feature">);</span><br>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;</p>
+
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div>
+            <br>
+            <br>
+            <button onclick="showHelloWorld();">
+                See js result
+            </button>
+        </div>
+    </main>
+
+
+
+
+    <script>
+        function showHelloWorld() {
+            alert("Hello World!");
+        }
+    </script>
 </body>
 </html>
