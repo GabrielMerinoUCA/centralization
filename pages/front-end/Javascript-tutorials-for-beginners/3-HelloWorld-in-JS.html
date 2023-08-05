@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
     <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/3-HelloWorld-in-JS.css" type="text/css">
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--Roboto condensed, Raleway-->
@@ -59,15 +58,19 @@
             </div>
             <br>
             <br>
-            <button onclick="showHelloWorld();">
-                See js result
-            </button>
+            <div class="next-chapter-cheater">
+                <div style="flex-grow: 1;">
+                    <button onclick="showHelloWorld();" style="flex-grow: 1;">
+                        See js result
+                    </button>
+                </div>
+                <a class="next-chapter" href="./4-Where-to-put-your-JS.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
         </div>
     </main>
-
-
-
-
+    
     <script>
         function showHelloWorld() {
             alert("Hello World!");

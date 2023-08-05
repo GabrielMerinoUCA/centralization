@@ -2,13 +2,14 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(#f7df1e, #c9b100 100%);
+    height: auto;
+    background: linear-gradient(#f7df1e, #c9b100);
     font-size: 18px;
     font-family: "Raleway";
-    overflow: hidden;
+    overflow: scroll;
     color: #23232e;
 }
+
 h1 {
     margin: 0;
     font-size: 48px;
@@ -18,7 +19,21 @@ h1 {
 .main-content {
     margin-left: 20vw;
     padding: 20px;
-    height: 100vh;
+    height: 100%;
+}
+
+.content-section {
+    margin: 10px;
+    height: 100%;
+}
+
+.next-chapter {
+    border: rgb(206, 206, 206) 2px solid;
+    color: rgb(206, 206, 206);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 38px;
+    background-color: #23232e;
 }
 
 .file-type-style {
@@ -65,4 +80,9 @@ button:hover {
     background-color: #1226bd;
     border: #1226bd 2px solid;
     text-decoration: underline;
+}
+
+.next-chapter-cheater {
+    display: flex;
+    flex-direction: row;
 }
