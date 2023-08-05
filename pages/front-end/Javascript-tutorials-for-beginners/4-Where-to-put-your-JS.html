@@ -34,7 +34,38 @@
     <main class="main-content">
         <h1>IV. Where to put your JS</h1><br>
         <div class="content-section">
-            <p>If a script is longer than 10 lines, put it on a separate .js file</p>
+            <h2>4.1. JS scripts on separate files</h2>
+            <p>If a script is longer than 10 lines, put it on a separate .js file, here's how you do it.</p><br>
+            <p class="file-type-style">index.html</p>
+            <br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . .<br>
+                <br>
+                <p class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Referencing external .js file --&gt;</p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script src=<span class="custom-dev-creation">"./test.js"</span>&gt;&lt;/script&gt;</p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div>
+            <br>
+            <p> Then add a file ending with the .js extension</p>
+            <br>
+            <p class="file-type-style">test.js</p>
+            <br><br>
+            <div class="code-container">
+                <p class="language-feature">alert(<span class="custom-dev-creation">"Hello world"</span>);</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="next-chapter-cheater">
+            <div style="flex-grow: 1;">
+                <button onclick="showHelloWorld();" style="flex-grow: 1;">
+                    See js result
+                </button>
+            </div>
+            <a class="next-chapter" href="./5-Basic-JS-syntax-and-rules.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
         </div>
     </main>
     <script src="../../../js/front-end/Javascript-tutorials-for-beginners/4-Where-to-put-your-JS.js"></script>

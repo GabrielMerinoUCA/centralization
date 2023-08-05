@@ -86,3 +86,17 @@ button:hover {
     display: flex;
     flex-direction: row;
 }
+
+.next-chapter:hover {
+    background-color: rgb(206, 206, 206);
+    color: #23232e;
+    border-color: #23232e;
+}
+
+.next-chapter i {
+    color: rgb(206, 206, 206);
+}
+
+.next-chapter:hover i {
+    color: #23232e;
+}
