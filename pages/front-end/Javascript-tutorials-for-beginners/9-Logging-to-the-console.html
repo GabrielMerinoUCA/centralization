@@ -3,9 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/9-Logging-to-the-console.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>IX. Logging to the console</h1>
+        <div class="content-section">
+            <h2>9.1. Document and Console</h2>
+            <p>
+                On your browser, there are two important things you have to know when a page is
+                loaded, first that the page loaded is known as the document, and that you can
+                execute JS code on the browser for the specific page using a console.
+            </p>
+            <p>
+                Why is this important? Because of the document and console built-in Javascript objects.
+                Javascript has a lot of prebuilt stuff such as this objects which make some tasks
+                easy to perform. We won't focus much on this objects for now, but just know that
+                the document object is used to interact directly with the "document" and the console
+                object is used to show data on the console, very useful for debugging.
+            </p>
+            <h2>9.2. write and log methods</h2>
+            <p>We well get more in depth with the document and console object in later chapters
+                for know we will talk about to methods used to log info in our pages from scripts,
+                document.write(), and console.log().
+            </p>
+            <div class="code-container">
+                <p class="comment">/* This method will overwrite the whole document content, 
+                    unless it has been used before, in which case, it will just add it at the end of the document */</p>
+                <p class="language-feature">
+                    document.write(<span class="custom-dev-creation">"Hello"</span>);
+                </p>
+            </div><br>
+            <button onclick="documentWrite()">See result</button><br><br>
+            <div class="code-container">
+                <p class="comment">
+                    /* This method will show whatever you pass as argument on
+                    the browser's page console */
+                </p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">"Hello"</span>);
+                </p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <div style="flex-grow: 1;">
+                    <button onclick="consoleLog()">See result</button>
+                </div>
+                <a class="next-chapter" href="./10-Booleans-in-Javascript.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="../../../js/front-end/Javascript-tutorials-for-beginners/9-Logging-to-the-console.js"></script>
 </body>
 </html>
