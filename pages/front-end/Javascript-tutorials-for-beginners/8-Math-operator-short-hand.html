@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/8-Math-operator-short-hand.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>VIII. Math Operator Short-hand</h1><br>
+        <div class="content-section">
+            <h2>8.1. Basic short-handed operators</h2>
+            <p>
+                Last tutorial I was wondering if we were going to talk about some handy operators
+                found in other languages like += operator. Apparently, this chapter is for that
+                Ok so what is the += operator anyways? This operator allows for a variable to 
+                be equal to the value held on itself plus another number
+            </p>
+            <div class="code-container">
+                <p class="language-feature">var <span class="custom-dev-creation">myVar = 5;</span></p>
+                <p class="custom-dev-creation">
+                    myVar += 5; <span class="comment">// myVar will be 10, is the same as saying myVar = myVar + 5;</span>
+                </p>
+            </div><br>
+            <p>
+                Asides from the += operator, there are other so called "short-hand" operators for most 
+                arithmetic operations that work in same fashion.
+            </p>
+            <div class="code-container">
+                <p class="language-feature">var <span class="custom-dev-creation">myVar = 4;</span></p><br>
+                <p class="comment">// Subtraction variation</p>
+                <p class="custom-dev-creation">myVar -= 2; <span class="comment">// myVar = 2</span></p><br>
+                <p class="comment">// Multiplication variation</p>
+                <p class="custom-dev-creation">myVar *= 10; <span class="comment">// myVar = 20</span></p><br>
+                <p class="comment">// Division variation</p>
+                <p class="custom-dev-creation">myVar /= 5; <span>// myVar = 4</span></p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>8.2. Even more short-handed operators</h2>
+            <p>
+                We know this operator from other languages, is the ++ and -- operator. They
+                essentially are short-handed operators from the short-hand operators +=1 or -=1.
+            </p>
+            <div class="code-container">
+                <p class="language-feature">var <span class="custom-dev-creation">myVar = 1;</span></p><br>
+                <p class="comment">// Addition operator</p>
+                <p class="custom-dev-creation">myVar++; <span class="comment">// myVar = 2</span></p>
+                <p class="custom-dev-creation">++myVar; <span class="comment">// myVar = 3</span></p><br>
+                <p class="comment">// Subtraction operator</p>
+                <p class="custom-dev-creation">myVar--; <span class="comment">// myVar = 2</span></p>
+                <p class="custom-dev-creation">--myVar; <span class="comment">// myVar = 1</span></p>
+            </div>
+            <p>
+                Remember that depending on where you put the operator matters, if you put it before the
+                variable name, the value of the variable will change before being used. If you put the
+                operator after the variable, then the value of the variable will be used and then will be 
+                changed so be careful; usually it's common practice to just use it before the variable.
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./9-Logging-to-the-console.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+    </main>
 </body>
 </html>
