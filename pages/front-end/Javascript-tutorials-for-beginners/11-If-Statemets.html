@@ -4,8 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/11-If-Statements.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XI. If Statements</h1>
+        <div class="content-section">
+            <h2>11.1. Basic expressions</h2>
+            <p>
+                There are different expressions that depending on the logic behind them will
+                return a Boolean value. Before getting into them, here's how if statements are
+                used in Javascript, as you can see, nothing out of the ordinary. I don't have
+                to explain to you how conditions work, do I?
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    var <span class="custom-dev-creation">
+                        youLikeMeat = <span class="language-feature">true;</span>
+                    </span>
+                </p>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">youLikeMeat</span>) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                        <span class="custom-dev-creation">
+                            "You like meat"
+                        </span> );
+                    <br>}
+                </p>
+            </div><br>
+            <p>
+                Now into the expressions, first we have the greater than and lesser than
+                expression. Again very self explanatory.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">7 &gt; 5</span>) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                        <span class="custom-dev-creation">
+                            "Indeed, 7 is greater than 5"
+                        </span> );<br>
+                    }
+                </p>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">7 &lt; 5</span>) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                        <span class="custom-dev-creation">
+                            "This is impossible"
+                        </span> ); <span class="comment">// Of course, if false, won't execute</span> <br>
+                    }
+                </p>
+            </div><br>
+            <p>Then we have the following expression, the equals to expression.</p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">10 == 10</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "It appears that 10 is equal to 10"
+                            </span> );<br>
+                        }
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>11.2. Else statement</h2>
+            <p>
+                Javascript of course also has the else statement, which is used when the condition
+                of an if statement is not true.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">9 == 10</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "This is impossible"
+                            </span> ); <span class="comment"></span> <br>
+                        }
+                </p>
+                <p class="language-feature">
+                    else {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                        <span class="custom-dev-creation">
+                            "It seems the condition is not true"
+                        </span>);<br>
+                    }
+                </p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./12-Else-if-Statements.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
+    <script src="../../../js/front-end/Javascript-tutorials-for-beginners/11-If-Statements.js"></script>
 </body>
 </html>
