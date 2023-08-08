@@ -4,8 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/10-Booleans-in-Javascript.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>X. Booleans in Javascript</h1><br>
+        <div class="content-section">
+            <h2>10.1. true and false</h2>
+            <p>
+                As stated previously, Javascript has the common found primitive data types
+                as for other languages. The one we will be talking right now are booleans as 
+                the title suggests. 
+            </p>
+            <div class="code-container">
+                <p class="language-feature">
+                    var <span class="custom-dev-creation">
+                        trueVar = <span class="language-feature">true;</span>
+                    </span>
+                </p>
+                <p class="language-feature">
+                    var <span class="custom-dev-creation">
+                        trueVar = <span class="language-feature">false;</span>
+                    </span>
+                </p>
+            </div><br>
+            <p>We'll get more in depth on some uses of this booleans. For now, this is their syntax</p>
+        </div>
+        <div class="content-section">
+            <h2>10.2. truthy and falsy</h2>
+            <p>
+                Unlike some other languages, Javascript supports what are so called truthy and falsy values.
+                There are some different ways a value can result in truthy or falsy. In the case of numbers,
+                any number equal to 0 will always be falsy and any other number (including negatives etc...)
+                will result on it returning a truthy value
+            </p>
+            <p>
+                Javascript has a method to determine the truthy or falsy values so we know if they are
+                true or false.
+            </p>
+            <div class="code-container">
+                <p class="language-feature">
+                    Boolean(<span class="custom-dev-creation">-5</span>);<span class="comment">// return true</span>
+                </p>
+                <p class="language-feature">
+                    Boolean(<span class="custom-dev-creation">0</span>);<span class="comment">// return false</span>
+                </p>
+            </div><br>
+            <p>
+                You can also use this method on strings, a string with any character (at least one),
+                will return truthy, and a string with no characters will return falsy
+            </p>
+            <div class="code-container">
+                <p class="language-feature">
+                    Boolean(<span class="custom-dev-creation">"Hello"</span>);<span class="comment">// return true</span>
+                </p>
+                <p class="language-feature">
+                    Boolean(<span class="custom-dev-creation">""</span>);<span class="comment">// return false</span>
+                </p>
+            </div>
+            <br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./11-If-Statemets.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+            <br>
+            <br>
+        </div>
+    </main>
 </body>
 </html>
