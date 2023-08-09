@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/15-While-loops.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XV. While loops</h1>
+        <div class="content-section">
+            <p>
+                While loops. A very important and common feature in programming languages, of course 
+                present in Javascript. We already know how they work but in summary, they will execute
+                the same inner code as long as their condition is false.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">var <span class="custom-dev-creation">age = 5,</span></p><br>
+                <p class="language-feature">
+                    while(<span class="custom-dev-creation">age &lt; 18</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "you are underaged"
+                            </span>
+                        );<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="custom-dev-creation">age++;</span><br>
+                    }
+                </p>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">"You are now an adult"</span>
+                    );
+                </p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./16-For-Loops.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
