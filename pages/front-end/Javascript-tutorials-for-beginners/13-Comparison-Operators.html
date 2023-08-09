@@ -4,8 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/13-Comparison-Operators.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XIII. Comparison Operators</h1>
+        <div class="content-section">
+            <h2>13.1. Intermediate expressions</h2>
+            <p>
+                Asides from the operators we already know, there also are the variations such as,
+                the greater-equal than and lesser-equal than operators.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">var <span class="custom-dev-creation">myNum = 7;</span></p><br>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">myNum &gt;= 7</span> ) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">"7 is greater or equal to 7"</span>
+                        );<br>
+                    }
+                </p>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">myNum &lt;= 10</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">"7 is lesser or equal to 10"</span>
+                        );<br>
+                    }
+                </p>
+            </div><br>
+            <p>
+                Now going for the more unique Javascript stuff, we'll see the triple equal to operator.
+                As stated previously, Javascript has truthy and falsy values. When we use normal
+                equal to operators, we are only comparing if the result is truthy, so only the values
+                are the same but not the datatype for example. In genereal, YOU ALWAYS WANT TO USE 
+                TRIPLE EQUAL TO OPERATOR.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">var <span class="custom-dev-creation">myNum = 5;</span></p><br>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">myNum == "5"</span> ) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "This is true, even if the data types are not the same, they only have
+                                to be 'truthy' for '==' to return true."
+                            </span>
+                        );<br>
+                    }
+                </p>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">myNum === "5"</span> ) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "Now this won't execute since we are comparing both value and datatype."
+                            </span>
+                        );<br>
+                    }
+                </p>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">myNum === 5</span> ) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "And this statement is true. This is why you should rather use this 
+                                operator instead."
+                            </span>
+                        );<br>
+                    }
+                </p>
+            </div><br>
+            <p>
+                Of course, Javascript also supports the not equal operator, however it follows
+                the same principle as the triple equal operator and just using "!=" would only check
+                for the value and not the data type.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">var <span class="custom-dev-creation">myNum = 4;</span></p><br>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">myNum != "4"</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "This should appear on console but since this is falsy, the return 
+                                value is false."
+                            </span>
+                        );<br>
+                    }
+                </p>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">myNum !== "4"</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">
+                                "This will appear since 4 is not a string and we are using the
+                                triple not equal to operator."
+                            </span>
+                        );<br>
+                    }
+                </p>
+            </div><br>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./14-Logical-operators.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
