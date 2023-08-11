@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/18-Practical-Examples-Using-Loops.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content"> 
+        <h1>XVIII. Practical Examples Using Loops</h1>
+        <div class="content-section">
+            <p>
+                This chapter will cover some code that won't be explained until further chapters,
+                so for now just focus on the logic.
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a href=<span class="custom-dev-creation">"#"</span>&gt;
+                    <span class="custom-dev-creation">link 0</span>
+                    &lt;/a&gt;
+                </p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a href=<span class="custom-dev-creation">"#"</span>&gt;
+                    <span class="custom-dev-creation">link 1</span>
+                    &lt;/a&gt;
+                </p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a href=<span class="custom-dev-creation">"#"</span>&gt;
+                    <span class="custom-dev-creation">link 2</span>
+                    &lt;/a&gt;
+                </p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a href=<span class="custom-dev-creation">"#"</span>&gt;
+                    <span class="custom-dev-creation">link 3</span>
+                    &lt;/a&gt;
+                </p>
+                <br>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;script src=<span class="custom-dev-creation">"./test.js"</span>&gt;&lt;/script&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    var <span class="custom-dev-creation">links</span> = document.getElementsByTagName(<span class="custom-dev-creation">"a"</span>);
+                </p>
+                <p class="language-feature">
+                    for(var <span class="custom-dev-creation">i = 0; i &lt; links.length; i++</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="custom-dev-creation">links[i].</span>className = <span class="custom-dev-creation">"links-" + i;</span><br>
+                    }
+                </p>
+            </div><br>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./19-Functions.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
