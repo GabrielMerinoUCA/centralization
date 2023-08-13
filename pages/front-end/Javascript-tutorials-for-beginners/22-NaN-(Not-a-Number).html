@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/22-Nan-(Not-a-Number).css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXII. NaN (Not a Number)</h1>
+        <div class="content-section">
+            <h2>22.1. Nothing makes sense</h2>
+            <p>
+                Now we're getting into the weirdness of Javascript. Remember what I said about
+                arithmetic operators not working with the combination of string and numbers on chapter
+                VII? Well, I was wrong and correct. You see, you cannot do arithmetic operations
+                between a string and a number UNLESS the string is made entirely of a number.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">"h" / 5</span>
+                    );<span class="comment">// Prints NaN</span>
+                </p>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">"5" / 5</span>
+                    );<span class="comment">// Prints 1</span>
+                </p>
+            </div><br>
+            <p>So in other words, the only arithmetic operator that doesn't work is the addition operator.</p>
+        </div>
+        <div class="content-section">
+            <h2>22.2. Check NaNs</h2>
+            <p>
+                If you want to check that an argument or variable is NaN, you have to use another
+                Javascript prebuilt function called isNaN(). And even though NaN is value that 
+                exists, just saying x == NaN won't work.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">a = "a";</span></p>
+                <p class="language-feature">let <span class="custom-dev-creation">b = 5;</span></p><br>
+                <p class="language-feature">
+                    if(isNaN(<span class="custom-dev-creation">a</span>)) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">"'a' is a NaN"</span>
+                        );<br>
+                    } else{
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">"This console.log() wont' be showed"</span>
+                        );<br>
+                    }
+                </p>
+            </div><br>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./23-Strings.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
