@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/20-Variable-Scope.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XX. Variable Scope</h1>
+        <div class="content-section">
+            <p>
+                Variable Scope is an interesting case study on Javascript. By general rule, it works
+                just like in any other programming language. But, there is a little extra twist.
+                If you do not define a variable outside any scope, it will be local. However,
+                it is a little bit more complicated than that... For beginners, we have 2 ways
+                of declaring variables, the let keyword, and the var keyword.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">z = "z";</span></p>
+                <p class="custom-dev-creation">
+                    <span class="language-feature">function</span> 
+                    myFunction() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="language-feature">var</span> x = "x";<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="language-feature">let</span> y = "y";<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="language-feature">
+                            console.log(<span class="custom-dev-creation">z</span>);
+                        </span> <span class="comment">// print "z"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="language-feature">
+                            console.log(<span class="custom-dev-creation">x</span>);
+                        </span><span class="comment">// print "x"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="language-feature">
+                                console.log(<span class="custom-dev-creation">y</span>);
+                        </span> <span class="comment">// reference error</span><br>
+                    }
+                </p><br>
+                <p class="comment">
+                    /* To make this even more confusing, you cannot use a "var"
+                     declared variable outside a function */
+                </p>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">x</span>
+                    );<span class="comment">// Reference Error</span>
+                </p>
+            </div><br>
+            <p>
+                So what can we conclude from this? Well, do not use the var keyword at all.
+                The scope ambiguity makes it very unpredictable and therefore hard to work
+                with and understand. Just use let for most cases and remember var for those 
+                0.1% scenarios where it makes sense to use it.
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./21-Numbers.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+    </main>
+    <br><br>
+    <script src="../../../js/front-end/Javascript-tutorials-for-beginners/20-Variable-Scope.js"></script>
 </body>
 </html>
