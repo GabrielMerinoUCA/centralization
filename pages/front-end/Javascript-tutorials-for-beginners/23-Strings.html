@@ -4,8 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/23-Strings.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXIII. Strings</h1>
+        <div class="content-section">
+            <h2>23.1. Use quotations without breaking the string</h2>
+            <p>
+                If you want to use double or single quotation marks on a string, you'll have to add
+                a back slash beforehand
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">
+                        x = "You are not supposed to say \"was\" when referring to present";
+                    </span>
+                </p>
+                <p class="language-feature">
+                    let
+                    <span class="custom-dev-creation">
+                        y = 'I\'m not here';
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>23.2. String object properties</h2>
+            <p>
+                Like many other languages, Javascript treats strings like objects, which means
+                that there are a collective of methods and attributes available that we can use.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">x = "Hello";</span></p><br>
+                <p class="comment">
+                    /* returns the amount of characters of the string without including termination 
+                    character */
+                </p>
+                <p class="custom-dev-creation">x.
+                    <span class="language-feature">length;</span>
+                </p><br>
+                <p class="comment">/* Make every character to upper case */</p>
+                <p class="custom-dev-creation">x.
+                    <span class="language-feature">toUpperCase();</span>
+                </p><br>
+                <p class="comment">/* Make every character to lower case */</p>
+                <p class="custom-dev-creation">x.
+                    <span class="language-feature">toLowerCase();</span>
+                </p><br>
+                <p class="comment">/* Find the first index of the first instance of the word sent 
+                    on arguments (starts at 0)*/
+                </p>
+                <p class="custom-dev-creation">x.
+                    <span class="language-feature">indexOf(
+                        <span class="custom-dev-creation">"lo"</span>
+                    );</span>
+                    <span class="comment">// returns 3</span>
+                </p>
+                <p class="comment">// if the string doesn't exist, it'll return -1</p><br>
+
+                <p class="comment">/* Javascript supports === operator for string comparison */</p>
+                <p class="language-feature">let <span class="custom-dev-creation">a = "abc";</span></p>
+                <p class="language-feature">let <span class="custom-dev-creation">b = "abc";</span></p><br>
+                <p class="language-feature">
+                    if(<span class="custom-dev-creation">a === b</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                            <span class="custom-dev-creation">"Both strings are the same"</span>
+                        );<br>
+                    }
+                </p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./24-Slice-and-Split-Strings.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
