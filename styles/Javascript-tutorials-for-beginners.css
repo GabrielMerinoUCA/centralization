@@ -23,9 +23,10 @@ h1 {
 .content-table {
     margin-top: 3vh;
     padding: 5px;
-    height: auto;
+    height: 80%;
     border: #33333a 2px solid;
     border-radius: 4px;
+    overflow: scroll;
 }
 
 .tutorial-chapters {
