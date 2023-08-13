@@ -4,8 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+    
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/21-Numbers.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXI. Numbers</h1>
+        <div class="content-section">
+            <p>
+                Many languages have their prebuilt math libraries, some with more content than others.
+                In the case of Javascript, wee have the Math object which provides some basic math
+                functionalities.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">a = 5;</span></p>
+                <p class="language-feature">let <span class="custom-dev-creation">b = 0.4;</span></p><br>
+                <p class="comment">// Rounding method</p>                
+                <p class="language-feature">
+                    Math.round(<span class="custom-dev-creation">a + b</span>); 
+                    <span class="comment">// result is 5</span>
+                </p><br>
+                <p class="comment">// Always round to the lowest value method</p>
+                <p class="language-feature">
+                    Math.round(<span class="custom-dev-creation">a + 0.9</span>); 
+                    <span class="comment">// Result is 5</span>
+                </p><br>
+                <p class="comment">// Always round to hightest value method (except x.0)</p>
+                <p class="language-feature">
+                    Math.ceil(<span class="custom-dev-creation">a + 0.1</span>);
+                    <span class="comment">// Result will be 6</span>
+                </p><br>
+                <p class="comment">// Find the biggest number from the args sent</p>
+                <p class="language-feature">
+                    Math.max(<span class="custom-dev-creation">5, 3, 6, 9</span>);
+                    <span class="comment">// will return 9</span>
+                </p><br>
+                <p class="comment">// Also provides some common math numbers</p>
+                <p class="language-feature">
+                    console.log(Math.PI);
+                </p>
+            </div><br>
+            <p>
+                If you want to know more about the capabilities of the Math object, visit
+                <a style="text-decoration: underline; color: #0000EE;" href="https://www.w3schools.com/js/js_math.asp" target="_blank">w3schools</a>
+            </p>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./22-NaN-(Not-a-Number).html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
