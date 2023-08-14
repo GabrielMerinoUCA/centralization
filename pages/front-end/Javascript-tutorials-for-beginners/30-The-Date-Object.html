@@ -4,8 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/30-The-Date-Object.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXX. The Date Object</h1>
+        <div class="content-section">
+            <h2>30.1. The Date Constructor</h2>
+            <p>
+                The Date object is very common in multiple programming languages. Javascript has
+                a very similar implementation as all of them.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">
+                        myDate = 
+                    </span>
+                    new Date();
+                </p><br>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myDate</span>);
+                    <span class="comment">// Prints the current date</span>
+                </p><br>
+                <p class="comment">
+                    /* You can also specify any date <br>
+                    arg1: year <br>
+                    arg2: month (0-11) <br>
+                    arg3: date <br>
+                    arg4: hour (0-23) <br>
+                    arg5: minute (0-59) <br>
+                    arg6: second (0-59) <br>
+                    */
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">pastDate = </span>
+                    new Date(<span class="custom-dev-creation">2000, 5, 16, 13, 15, 0</span>);
+                </p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">pastDate</span>);
+                    <span class="comment">// Prints "16 June 2000, 1:15 PM"</span>
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>30.2. Date Methods</h2>
+            <p>
+                Since Date is an object and we know Javascript prebuilt features have methods and other
+                properties within, we will talk about some of Date's methods.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myDate =</span>
+                    new Date(<span class="custom-dev-creation">2000, 5, 16, 13, 15, 0</span>);
+                </p><br>
+                <p class="comment">// Prints the month (0-11)</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myDate.</span>getMonth());
+                </p><br>
+                <p class="comment">// Prints the year</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myDate.</span>getYear());
+                </p><br>
+                <p class="comment">// Prints the date (1-31)</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myDate.</span>getDate());
+                </p><br>
+                <p class="comment">// Prints day of week (0-6)</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myDate.</span>getDay());
+                </p><br>
+                <p class="comment">// Prints the hour</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myDate.</span>getHours());
+                </p><br>
+                <p class="comment">// Prints number of milliseconds since 1st Jan 1970</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myDate.</span>getTime());
+                </p>
+                <p class="comment">
+                    /* Javascript is weird, but we already know that. A very useful reason for
+                     "getTime()" to exist is to compare since even if two Dates are the exact same,
+                     you won't be able to compare them using the "==" operator. */
+                </p>
+            </div>
+            <p>
+                As usual, complex objects such as Date have many other methods and such so 
+                <a href="https://www.w3schools.com/js/js_dates.asp" target="_blank" style="color: #0000EE; text-decoration: underline;">here</a>
+                I'll leave link for you</p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./31-What-is-the-DOM-in-Javascript.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
