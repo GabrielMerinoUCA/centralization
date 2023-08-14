@@ -4,8 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/24-Slice-and-Split-Strings.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XIV. Slice and Split Strings</h1>
+        <div class="content-section">
+            <h2>24.1. Slice</h2>
+            <p>This essentially is going to be a continuation to the previous chapter.</p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">str = "Hello world";</span></p>
+                <p class="comment">
+                    /* <br>
+                    This function allows you to extract a segment of any string <br>
+                    arg1: The first character's index from the slice of string you want to extract <br>
+                    arg2: The ending character's position from the slice of string you want to extract,
+                    yes, it's no longer the index for some reason <br>
+                    */
+                </p>
+                <p class="language-feature">
+                    let <span class="custom-dev-creation">
+                        str2 = str.
+                    </span>
+                    slice(<span class="custom-dev-creation">2, 8</span>);
+                </p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">str2</span>);
+                    <span class="comment">// Prints "llo wo"</span>
+                </p>
+            </div>
+            <p>
+                If you don't pass a second argument, it will slice from the first arg, till the end
+                of the string.
+            </p>
+        </div>
+        <div class="content-section">
+            <h2>24.2. Split</h2>
+            <p>
+                The split method allows you to split a string into multiple strings. You define
+                when you want to generate the split using a character or string. Once the character is found
+                in the original string, a new string will be created and added to a string array.
+                (More on arrays on the next chapter)
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">
+                        str = "ham, peperoni, chicken, meat, fish, pork";
+                    </span>
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">
+                        strArray = str.
+                    </span> 
+                    split(<span class="custom-dev-creation">", "</span>);
+                    <span class="comment">//split when comma and space found</span>
+                </p><br>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">strArray</span>);
+                </p>
+                <p class="comment">/* Result: ["ham", "peperoni", "chicken", "meat", "fish", "pork"] */</p>
+            </div>
+            <p>
+                Strings are a very long topic. If you want to know more about the string datatype
+                and methods, visit 
+                <a style="color: #0000EE; text-decoration: underline;" href="https://www.w3schools.com/js/js_strings.asp" target="_blank">
+                    w3schools
+                </a>
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./25-Arrays.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
