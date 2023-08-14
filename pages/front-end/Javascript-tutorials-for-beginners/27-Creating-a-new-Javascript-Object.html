@@ -4,8 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/27-Creating-a-new-Javascript-Object.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXVII. Creating a new Javascript Object</h1>
+        <div class="content-section">
+            <h2>27.1. Adding attributes to Object</h2>
+            <p>
+                Javascript has some uniqueness with objects. Unlike other languages that force you
+                to define a class so you can instantiate an object, Javascript allows you to insert
+                attributes on a variable after it's definition with no problem.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="comment">// Specifying "new Object()" is obligatory</p>
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">myCar = </span>new Object();<br>
+                </p><br>
+                <p class="custom-dev-creation">myCar.topSpeed = 75;</p>
+                <p class="custom-dev-creation">myCar.driver = "John";</p><br>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">myCar.drive</span>
+                    );<span class="comment">// Prints John</span>
+                </p>
+
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>27.2. Adding methods to Object</h2>
+            <p>Asides from attributes, you can also insert methods.</p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">myCar = </span>new Object();<br>
+                </p><br>
+                <p class="comment">/* Javascript allows assignation of functions to variables/attributes */</p>
+                <p class="custom-dev-creation">
+                    myCar.drive =
+                    <span class="language-feature"> function() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="custom-dev-creation">
+                            "Driving"
+                        </span>);<br>
+                    };</span>
+                </p>
+                <p class="custom-dev-creation">
+                    myCar.drive(); <span class="comment">// Prints "Driving"</span>
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>27.3. The short handed version of creating objects</h2>
+            <p>
+                The same way you can immediately assign an array a list of values, you can assign
+                a whole pre-defined object structure to a variable.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">
+                        myCar2 = {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// attribute: value</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;topSpeed: 115;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;driver: "John"<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// method: function</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;drive: 
+                            <span class="language-feature">
+                                function() {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(
+                                        <span class="custom-dev-creation">"Driving"</span>
+                                    );<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            </span>
+                        };
+                    </span>
+                </p>
+            </div><br>
+            <p>
+                Now, you might bw wondering, How about classes? well, I'm not sure but maybe they
+                are part of another tutorial series we will cover on the near future
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./28-THIS-Keyword.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
+    <script src="../../../js/front-end/Javascript-tutorials-for-beginners/27-Creating-a-new-Javascript-Object.js"></script>
 </body>
 </html>
