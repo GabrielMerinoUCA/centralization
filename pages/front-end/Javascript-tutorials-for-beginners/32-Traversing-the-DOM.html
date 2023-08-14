@@ -4,8 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/32-Traversing-the-DOM.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content" id="main">
+        <h1>XXXII. Traversing the DOM</h1>
+        <div class="content-section">
+            <h2>32.1. The "document" object</h2>
+            <p>
+                If we want to retrieve any element from within the document, there is a selection
+                of methods from the document object, an object that essentially represents the document
+                as a whole.
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a class=<span class="custom-dev-creation">"link"</span>&gt;
+                    <span class="custom-dev-creation">link 1</span> &lt;/a&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a class=<span class="custom-dev-creation">"link"</span>&gt;
+                    <span class="custom-dev-creation">link 2</span> &lt;/a&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a class=<span class="custom-dev-creation">"link"</span>&gt;
+                    <span class="custom-dev-creation">link 3</span> &lt;/a&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a class=<span class="custom-dev-creation">"link"</span>&gt;
+                    <span class="custom-dev-creation">link 4</span> &lt;/a&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="comment">/* From the document (root), get all elements that have this class Name */</p>
+                <p class="language-feature">
+                    console.log(document.getElementsByClassName(
+                        <span class="custom-dev-creation">"link"</span>
+                    )); <span class="comment">// Prints list of links in object format</span>
+                </p>
+            </div><br>
+        </div>
+        <div class="content-section">
+            <h2>32.2. Nested element retrieval</h2>
+            <p>If you retrieve an element from the document and that element has many elements, you
+                can retrieve such elements from the previous one.
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;div class=<span class="custom-dev-creation">"content"</span>&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a&gt;<span class="custom-dev-creation">link 1</span>&lt;/a&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a&gt;<span class="custom-dev-creation">link 2</span>&lt;/a&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a&gt;<span class="custom-dev-creation">link 3</span>&lt;/a&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;a&gt;<span class="custom-dev-creation">link 4</span>&lt;/a&gt;
+                </p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">divTags = </span>
+                    document.getElementsByClassName(<span class="custom-dev-creation">"content"</span>);
+                </p><br>
+                <p class="comment">/* divTags is an object list of html elements, such elements
+                    have the same properties as the document object since they are all elements/nodes*/</p>
+                <p class="custom-dev-creation"><span class="language-feature">let</span>
+                    anchorTags = divTags[0].<span class="language-feature">getElementsByTagName(
+                        <span class="custom-dev-creation">"a"</span>);
+                    </span>
+                </p>
+            </div>
+        </div><br>
+        <div class="content-section">
+            <h2>32.3. Retrieve a single element</h2>
+            <p>
+                So far we've been retrieving object lists of html elements. However, if we define
+                ids on our elements, we can retrieve them immediately (This is why the id attribute
+                should be unique)
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;div id=<span class="custom-dev-creation">"the-only-content"</span>&gt;
+                </p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    console.log(
+                        document.getElementById(
+                            <span class="custom-dev-creation">"the-only-content"</span>
+                        ));
+                </p>
+                <p class="comment">// Prints a single html element instead of an object list</p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./33-Changing-Page-Content.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
