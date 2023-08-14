@@ -4,8 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/24-Slice-and-Split-Strings.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXV. Arrays</h1>
+        <div class="content-section">
+            <h2>25.1. Arrays on Javascript</h2>
+            <p>
+                Arrays are very common characteristics from any programming language, and as you might
+                expect, Javascript is no exception. The syntax is very conventional as you will see.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">myArray = [];</span>
+                </p><br>
+                <p class="comment">
+                    /* JS is a weird language, you can insert values on any index
+                    of an array, when the array itself is empty*/
+                </p>
+                <p class="custom-dev-creation">myArray[1] = 25;</p><br>
+                <p class="comment">
+                    /* But that's not the only weird thing. On Javascript, you can have an array of
+                    different data types */
+                </p>
+                <p class="custom-dev-creation">myArray[0] = "This makes sense";</p><br>
+
+                <p class="comment">
+                    /* Now, something cool about Javascript is that you don't need a loop to see
+                    all the values of the array. You can directly print them by just specifying
+                    the array itself */
+                </p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myArray</span>);
+                    <span class="comment">// Print "Array ["this makes sense", 58]"</span>
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>25.2. Array properties</h2>
+            <p>
+                Javascript has a set of default methods supported by arrays like some other languages
+                do.
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="comment">// Show array length</p>
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">myArray = [20, 10, 5, 9];</span>
+                </p><br>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myArray.length</span>);
+                    <span class="comment">// Prints 4</span>
+                </p><br>
+                <p class="comment">// Sort ascending</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myArray.sort()</span>);
+                    <span class="comment">// Prints "Array [5, 9, 10, 20]"</span>
+                </p>
+            </div><br>
+            <p>
+                Again, we are dealing with some prebuilt Javascript features that are very extensive
+                in content. So naturally, I'll leave a link 
+                <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank" style="color: #0000EE; text-decoration: underline;">here</a>
+                so you can check more on arrays.
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./26-Introduction-to-Objects.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
