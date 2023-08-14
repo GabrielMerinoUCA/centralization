@@ -4,8 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/28-THIS-Keyword.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXVIII. THIS Keyword</h1>
+        <div class="content-section">
+            <p>
+                "this" is a OOP concept used to refer to the current object we're in. Javascript
+                works in this same old fashioned way as it should
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">
+                        myCar = {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;topSpeed: 100,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;driver: "John",<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;whatThis:
+                            <span class="language-feature">
+                                function() {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    console.log(this); <span class="comment">
+                                        // Prints current object info
+                                    </span><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            </span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;getDriver: 
+                            <span class="language-feature">
+                                function() {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    return this.<span class="custom-dev-creation">driver;</span><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            </span>
+                        }
+                    </span>
+                </p><br>
+                <p class="custom-dev-creation">myCar.whatThis();</p><br>
+                <p class="comment">
+                    /* "this" is particularly useful on JS due to JS's global scope
+                    properties */
+                </p>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">myCar.getDriver()</span>
+                    );
+                </p>
+            </div><br>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./29-Constructor-Functions.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+    </main>
+    <script src="../../../js/front-end/Javascript-tutorials-for-beginners/28-THIS-Keyword.js"></script>
 </body>
 </html>
