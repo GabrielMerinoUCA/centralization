@@ -4,8 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/38-Introduction-to-Javascript-Events.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXXVIII. Introduction to Javascript Events</h1>
+        <div class="content-section">
+            <p>
+                On a web page, almost everything is an event. from all th elements you hover in,
+                the elements you click or drag, etc. A very common event is the "onclick event".
+                This event can be defined as an html attribute or indirectly via Javascript. So which
+                one should you use? well it depends but, for reusability, use the Javascript file 
+                approach since if you have to apply an event action for multiple elements, you can
+                do it easier with Javascript
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;
+                    <span class="custom-dev-creation">Button 1</span>
+                    &lt;/button&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;
+                    <span class="custom-dev-creation">Button 2</span>
+                    &lt;/button&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;
+                    <span class="custom-dev-creation">Button 3</span>
+                    &lt;/button&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">parent = </span>
+                    document.getElementsByTagName(
+                        <span class="custom-dev-creation">"body"</span>
+                    )[<span class="custom-dev-creation">0</span>];
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">
+                        buttons = 
+                    parent.</span>getElementByTagName(
+                        <span class="custom-dev-creation">"button"</span>
+                    );
+                </p><br>
+                <p class="custom-dev-creation">
+                    buttons[0].<span class="language-feature">onclick = 
+                        function() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            alert(<span class="custom-dev-creation">"Hello world"</span>);<br>
+                        }
+                    </span>
+                </p>
+                <p class="custom-dev-creation">
+                    buttons[1].<span class="language-feature">onclick = 
+                        function() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            alert(<span class="custom-dev-creation">"Hello world"</span>);<br>
+                        }
+                    </span>
+                </p>
+                <p class="custom-dev-creation">
+                    buttons[2].<span class="language-feature">onclick = 
+                        function() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            alert(<span class="custom-dev-creation">"Hello world"</span>);<br>
+                        }
+                    </span>
+                </p>
+                <p class="comment">
+                    /* You could use a for loop if you wanted to be more practical
+                    and actually make this code reusable*/
+                </p>
+            </div><br>
+            <p>
+                There are many events and covering them all will take forever. So as usual, 
+                <a href="https://www.w3schools.com/js/js_events.asp" target="_blank" style="color: #00e; text-decoration: underline;">here's</a>
+                a link for more information.
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./39-The-onClick-Event.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
