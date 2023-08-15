@@ -4,8 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/33-Changing-Page-Content.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXXIII. Changing Page Content</h1>
+        <div class="content-section">
+            <h2>33.1. innerHTML</h2>
+            <p>
+                In order to change the content of a web page, first we have to grab an element and then,
+                we have to the prebuilt methods to change the content.
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;. . .
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myBodyTag = </span>
+                    document.getElementsByTagName(<span class="custom-dev-creation">"body"</span>);
+                </p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myBodyTag[0]</span>.innerHTML);
+                    <span class="comment">// Will print the whole document on it's basic
+                        html form
+                    </span>
+                </p><br>
+                <p class="comment">/*Because you now have a reference to all the contents on
+                    the body tag, you can change all that's inside of it using the property*/</p>
+                <p class="custom-dev-creation">
+                    myBodyTag[0].<span class="language-feature">innerHTML</span> = 
+                    "&lt;p&gt;Hello world&lt;/p&gt;";
+                    <span class="comment">// overwrites the whole page with the content</span>
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>33.2. textContent</h2>
+            <p>
+                innerHTML is usually used when you want to write html into a specific element. 
+                That is useful in some scenarios but not all of them. If you want to see the
+                plain text of the element in question or just change the inner text of it,
+                there is a different property.
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;
+                </p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . .
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myHeaderTag = </span>
+                    document.getElementsByTagName(<span class="custom-dev-creation">"h1"</span>);
+                </p><br>
+                <p class="comment">/* Prints only the inner text of the element (same as innerHTML
+                    but without the tags) */</p>
+                <p class="language-feature">
+                    console.log(<span class="custom-dev-creation">myHeaderTag[0].</span>contentText);
+                </p><br>
+                <p class="comment">/* Because we are changing the text, the html will show
+                    "&lt;p&gt;Hello&lt;/p&gt;" literally, with the tags*/</p>
+                <p class="custom-dev-creation">
+                    myHeaderTag[0].<span class="language-feature">contentText</span> = 
+                    "&lt;p&gt;Hello&lt;/p&gt;"
+                </p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./34-Changing-Element-Attributes.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
