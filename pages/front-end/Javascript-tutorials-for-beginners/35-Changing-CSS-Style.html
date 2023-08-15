@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/35-Changing-CSS-Style.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXXV. Changing CSS Style</h1>
+        <div class="content-section">
+            <p>Just like you can manage the html elements of a document, you can also manage
+                their style. However, you can not modify the css stylesheet itself, so any changes
+                you do will be "local".
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;
+                </p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . .
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myHeaderTag = </span>
+                    document.getElementsByTagName(
+                        <span class="custom-dev-creation">"h1"</span>
+                    )[<span class="custom-dev-creation">0</span>];
+                </p><br>
+                <p class="comment">// you can change css properties using the style attribute</p>
+                <p class="custom-dev-creation">
+                    myHeaderTag.<span class="language-feature">style.marginTop</span> = "10px";
+                </p>
+                <p class="comment">/* So, two things to note. First, the css properties are
+                    using camel case. Second, all the "style" attributes are type string (unless) */</p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./36-Adding-Elements-to-the-DOM.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+    </main>
 </body>
 </html>
