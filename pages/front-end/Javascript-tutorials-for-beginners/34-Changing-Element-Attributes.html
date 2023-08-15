@@ -4,8 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/34-Changing-Element-Attributes.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content" id="main">
+        <h1>XXXIV. Changing Element Attributes</h1>
+        <div class="content-section">
+            <p>
+                As we know, html elements have attributes, and such attributes can be managed using 
+                Javascript. 
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;main id=<span class="custom-dev-creation">"main-id"</span>
+                    class=<span class="custom-dev-creation">"main-content"</span>&gt;
+                </p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. . .
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;/main&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myMainTag = </span>
+                    document.getElementById(<span class="custom-dev-creation">"main-id"</span>);
+                </p><br>
+                <p class="comment">/* The "getAttribute()" method returns the contents
+                    of whatever attribute you pass from the selected element */</p>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">myMainTag.</span>getAttribute(
+                            <span class="custom-dev-creation">"class"</span>
+                        )
+                    );<span class="comment">// Prints "main-content"</span>
+                </p><br>
+                <p class="comment">/* The "setAttribute" does what it's name implies <br>
+                    arg1: attribute you want to change <br>
+                    arg2: new value to assign to such attribute <br>
+                    */
+                </p>
+                <p class="custom-dev-creation">
+                    myMainTag.
+                    <span class="language-feature">
+                        setAttribute(
+                            <span class="custom-dev-creation">"class", "navbar"</span>
+                        ); 
+                    </span><span class="comment">// Changes main tag class value and therefore style</span>
+                </p>
+                <p class="comment">/*Also, if the attribute doesn't exist, it will create it*/</p><br>
+                <p class="comment">
+                    /* You can see the class attribute value or change it using this attribute */
+                </p>
+                <p class="custom-dev-creation">
+                    myMainTag.<span class="language-feature">className</span> = "main-content";
+                </p><br>
+            </div>
+            <p>
+                Asides from this attributes and methods, there are many more, like href and src which
+                return the complete path (not the value), and style which returns the whole style used
+                by the element as an object.
+            </p>
+            <p>
+                The DOM is a very extensive case study, therefore as usual, I'll leave a link from
+                <a href="https://www.w3schools.com/jsref/dom_obj_all.asp" target="_blank" style="color: #00e; text-decoration: underline;">w3schools</a>.
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./35-Changing-CSS-Style.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
