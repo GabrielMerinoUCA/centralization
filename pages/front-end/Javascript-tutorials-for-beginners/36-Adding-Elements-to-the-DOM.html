@@ -4,8 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/35-Changing-CSS-Style.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XXXVI. Adding Elements to the DOM</h1>
+        <div class="content-section">
+            <p>
+                Managing the document from Javascript also includes adding new elements within the
+                pre-declared objects.
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;li&gt;
+                    <span class="custom-dev-creation">Item 1</span>
+                    &lt;/li&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;li&gt;
+                    <span class="custom-dev-creation">Item 2</span>
+                    &lt;/li&gt;
+                </p><p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;li&gt;
+                    <span class="custom-dev-creation">Item 3</span>
+                    &lt;/li&gt;
+                </p><p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;li&gt;
+                    <span class="custom-dev-creation">Item 4</span>
+                    &lt;/li&gt;
+                </p>
+                <p class="language-feature">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="comment">/* Step 1: Create element to be added */</p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myListItem = </span>
+                    document.createElement(
+                        <span class="custom-dev-creation">"li"</span>
+                    );
+                    <span class="comment">// created new "li" element</span>
+                </p><br>
+                <p class="comment">
+                    /*Step 2: You can create another element that can be inserted into the previously
+                    created element */
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myAnchorTag = </span>
+                    document.createElement(
+                        <span class="custom-dev-creation">"a"</span>
+                    );
+                    <span class="comment">// created new "li" element</span>
+                </p><br>
+                <p class="comment">
+                    /* Step 3: Retrieve the element parent (if necessary) to then retrieve the 
+                    desired child element */
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myBodyTag =</span>
+                    document.getElementByTagName(
+                        <span class="custom-dev-creation">"body"</span>
+                    )[<span class="custom-dev-creation">0</span>];
+                    <span class="comment">// Use id on html</span>
+                </p><br>
+                <p class="comment">/* Step 4: Get the desired element */</p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">
+                        myListTag = myBodyTag.</span>getElementsByTagName(
+                            <span class="custom-dev-creation">"ul"</span>
+                        )[<span class="custom-dev-creation">0</span>];
+                </p><br>
+                <p class="comment">/* Step 5: Append the created element to the desired element */</p>
+                <p class="custom-dev-creation">
+                    myListTag.<span class="language-feature">appendChild(
+                        <span class="custom-dev-creation">myListItem</span> 
+                        );
+                    </span>
+                    <span class="comment">// The html ul now has 5 elements</span>
+                </p><br>
+                <p class="comment">
+                    /* Step 6: Since we already have a reference to the "li" we just created,
+                    we can add manipulate it and such changes will be reflected immediately on
+                    the webpage. */
+                </p>
+                <p class="custom-dev-creation">
+                    myListItem.<span class="language-feature">appendChild(
+                            <span class="custom-dev-creation">myAnchorTag</span>
+                        );
+                    </span>
+                    <span class="comment">// The new html "li" now has an a tag</span>
+                </p>
+            </div><br>
+            <p>
+                Alright that's one way of doing it however, you might have noticed that we can only
+                insert elements at the bottom of the parent element. If we want to insert an element
+                at any position, we have to use a different method
+            </p>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                . . .
+                <p class="comment">
+                    /* We can reuse the previously created "li" however since it's a reference,
+                    it will not create new list items<br>
+                    arg1: element to insert <br>
+                    arg2: element that will have the arg1 element inserted before it.
+                    */
+                </p>
+                <p class="custom-dev-creation">
+                    myListTag.<span class="language-feature">insertBefore(
+                            <span class="custom-dev-creation">myListItem,
+                                myListTag.</span><span class="language-feature">getElementsByTagName(
+                                        <span class="custom-dev-creation">
+                                            "li"
+                                        </span>
+                                    )[<span class="custom-dev-creation">1</span>];
+                                </span>
+                        )
+                    </span>
+                </p>
+                <p class="comment">// will insert it before "Item 1" and after "Item 2"</p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./37-Removing-Elements-from-the-DOM.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
