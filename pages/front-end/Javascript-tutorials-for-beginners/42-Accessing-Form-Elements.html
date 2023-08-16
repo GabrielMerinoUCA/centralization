@@ -4,8 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/42-Accessing-Form-Elements.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XLII. Accessing Form Elements</h1>
+        <div class="content-section">
+            <h2>42.1. Accessing Input data</h2>
+            <p>
+                Javascript can be used for form validation on the client side. To achieve this,
+                we can access the form using a specific attribute usually used on forms
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;form name=<span class="custom-dev-creation">"form1"</span>&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input 
+                    type=<span class="custom-dev-creation">"text"</span>
+                    name=<span class="custom-dev-creation">"name"</span> /&gt;&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input
+                    type=<span class="custom-dev-creation">"checkbox"</span>
+                    name=<span class="custom-dev-creation">"biking"</span>
+                    value=<span class="custom-dev-creation">"biking"</span>/&gt;
+                    <span class="custom-dev-creation">Biking</span>&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input
+                    type=<span class="custom-dev-creation">"checkbox"</span>
+                    name=<span class="custom-dev-creation">"skiing"</span>
+                    value=<span class="custom-dev-creation">"skiing"</span>/&gt;
+                    <span class="custom-dev-creation">Skiing</span>&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input
+                    type=<span class="custom-dev-creation">"checkbox"</span>
+                    name=<span class="custom-dev-creation">"driving"</span>
+                    value=<span class="custom-dev-creation">"driving"</span>/&gt;
+                    <span class="custom-dev-creation">Driving</span>&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;select 
+                    name=<span class="custom-dev-creation">"color"</span>&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;option&gt;<span class="custom-dev-creation">Red</span>&lt;/option&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;option&gt;<span class="custom-dev-creation">Green</span>&lt;/option&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;option&gt;<span class="custom-dev-creation">Blue</span>&lt;/option&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;/select&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input 
+                    type=<span class="custom-dev-creation">"submit"</span>
+                    name=<span class="custom-dev-creation">"submit</span>
+                    value=<span class="custom-dev-creation">"Submit</span>
+                    /&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            
+            <div class="code-container">
+                <p class="comment">
+                    /* The forms attribute contains an attribute collection of all
+                    the forms of the document. The name of such attributes is associated
+                    with the html name attribute you specify.*/
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myForm = </span>
+                    document.forms.<span class="custom-dev-creation">form1;</span>
+                </p><br>
+                <p class="comment">
+                    /* And the form itself works the same way but for all
+                    its input children */
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">textInput = myForm.name;</span>
+                </p><br>
+                <p class="comment">
+                    /* The value attribute returns the current value of the input. In the case
+                    of the text input, it returns the value that the user inputted */
+                </p>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">textInput.</span>value
+                    );
+                </p><br>
+                <p class="comment">/* This also applies to all inputs */</p>
+                <p class="language-feature">
+                    console.log(
+                        <span class="custom-dev-creation">myForm.color.</span>value
+                    );<span class="comment">// Prints user selected color</span>
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <h2>42.2. onFocus &amp; onBlur events</h2>
+            <p>
+                As stated in previous chapters, there are events everywhere. One of those events
+                happens when you click on any input, selecting it. This triggers the "onFocus"
+                event and allows us to run code when this happens.
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <p>(The same one)</p><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <br>
+                . . .<br><br>
+                <p class="language-feature">
+                    <span class="custom-dev-creation">textInput.</span>onfocus =
+                    function() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="custom-dev-creation">textInput.</span>style.border =
+                        <span class="custom-dev-creation">"2px solid pink";</span><br>
+                    } <span class="comment">// changes text input border style when selected</span>
+                </p><br>
+                <p class="comment">
+                    /* Of course, if we click off the input, the style will remain the same way.
+                    To return it back to it's previous state, you'll have to use "onBlur"*/
+                </p>
+                <p class="language-feature">
+                    <span class="custom-dev-creation">textInput.</span>onfocus =
+                    function() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="custom-dev-creation">textInput.</span>style.border =
+                        <span class="custom-dev-creation">"none";</span><br>
+                    } <span class="comment">// changes text input  style when deselected</span>
+                </p>
+            </div><br>
+            <p>
+                I want to add that there is a way to achieve the onfocus event on css. However,
+                there is no onblur event. You could engineer something but it is simpler to use
+                Javascript; and since you are already using Javascript, you might as well do 
+                everything on Javascript
+
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./43-VERY-Simple-Form-Validation.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
