@@ -4,8 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/43-VERY-Simple-Form-Validation.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XLIII. VERY Simple Form Validation</h1>
+        <div class="content-section">
+            <p>
+                Javascript allows to make form validation from the client side. Client side form
+                validation can be very useful to provide feedback to the user about simple
+                mistakes or restrictions without having to overload the server with unnecessary
+                requests. However, if there is any sort of complex form validation, do not use
+                Javascript. 
+            </p>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;form name=<span class="custom-dev-creation">"form1"</span>&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input 
+                    type=<span class="custom-dev-creation">"text"</span>
+                    name=<span class="custom-dev-creation">"name"</span> /&gt;&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;div 
+                    id=<span class="custom-dev-creation">"message"</span>
+                    style=<span class="custom-dev-creation">"color: red;"</span>&gt;&lt;/div&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input
+                    type=<span class="custom-dev-creation">"checkbox"</span>
+                    name=<span class="custom-dev-creation">"biking"</span>
+                    value=<span class="custom-dev-creation">"biking"</span>/&gt;
+                    <span class="custom-dev-creation">Biking</span>&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input
+                    type=<span class="custom-dev-creation">"checkbox"</span>
+                    name=<span class="custom-dev-creation">"skiing"</span>
+                    value=<span class="custom-dev-creation">"skiing"</span>/&gt;
+                    <span class="custom-dev-creation">Skiing</span>&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input
+                    type=<span class="custom-dev-creation">"checkbox"</span>
+                    name=<span class="custom-dev-creation">"driving"</span>
+                    value=<span class="custom-dev-creation">"driving"</span>/&gt;
+                    <span class="custom-dev-creation">Driving</span>&lt;br&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;select 
+                    name=<span class="custom-dev-creation">"color"</span>&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;option&gt;<span class="custom-dev-creation">Red</span>&lt;/option&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;option&gt;<span class="custom-dev-creation">Green</span>&lt;/option&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;option&gt;<span class="custom-dev-creation">Blue</span>&lt;/option&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;/select&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;input 
+                    type=<span class="custom-dev-creation">"submit"</span>
+                    name=<span class="custom-dev-creation">"submit</span>
+                    value=<span class="custom-dev-creation">"Submit</span>
+                    /&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;
+                </p>
+                <p class="language-feature">&lt;/body&gt;</p>
+            </div><br>
+            <p class="file-type-style">test.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">myForm = </span>
+                    document.forms.<span class="custom-dev-creation">form1;</span>
+                </p>
+                <p class="language-feature">let
+                    <span class="custom-dev-creation">message =</span>
+                    document.getElementById(
+                        <span class="custom-dev-creation">"message"</span>
+                    );
+                </p><br>
+                <p class="comment">/* Execute this function when the form is submitted */</p>
+                <p class="language-feature">
+                    <span class="custom-dev-creation">myForm.</span>onsubmit = function() {<br> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        if(<span class="custom-dev-creation">myForm.name.</span>value === 
+                        <span class="custom-dev-creation">""</span>) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="custom-dev-creation">message.contentText = "Field cannot be empty!";</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="comment">
+                                /* returning false on the onsubmit event function will prevent the submission of the form */
+                            </span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            return false; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        } else {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="custom-dev-creation">message.contentText = "";</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="comment">/* And returning true will allow form submission */</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            return true; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        } <br>
+                    }
+                </p>
+            </div>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./44-Javascript-libraries.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
 </body>
 </html>
