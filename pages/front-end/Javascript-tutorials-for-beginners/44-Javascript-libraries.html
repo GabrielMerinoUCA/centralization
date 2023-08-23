@@ -4,8 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Javascript-turorials-for-beginners/44-Javascript-libraries.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto condensed, Raleway-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="flex-container">
+            <div class="navbar-flex-items flex-header">
+                TUTORIALS &nbsp;<i class="fa-solid fa-arrow-left" style="color: rgb(206, 206, 206);"></i>
+            </div>
+            <div class="navbar-flex-items">
+                <i class="fa-brands fa-square-js fa-2xl" style="color: rgb(206, 206, 206)"></i>&nbsp; Javascript
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>XLIV. Javascript Libraries</h1>
+        <div class="content-section">
+            <p>
+                Javascript libraries can bring some additional functionalities to your webpage.
+                There are many of them and for this example, we'll check how to install one of them,
+                JQuery. However, I do not recommend learning such library as it was originally 
+                created with the intention to bring consistency to the weirdness that old Javascript
+                had, and of course, JQuery will make your page load slower.
+            </p>
+            <h2>Step 1: add the script tag</h2>
+            <p class="file-type-style">index.html</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">&lt;body&gt;</p><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;. . .<br>
+                <p class="comment">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;!-- You add the script that references an external server. Always put your 
+                    libraries before any other script that might depend on them --&gt;
+                </p>
+                <p class="language-feature">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;script src=
+                    <span class="custom-dev-creation">"https://code.jquery.com/jquery-3.7.0.slim.min.js"</span>
+                    integrity=
+                    <span class="custom-dev-creation">"sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="</span>
+                    crossorigin=
+                    <span class="custom-dev-creation">"anonymous"</span>&gt;
+                    &lt;/script&gt;
+                </p>
+                <p class="language-feature">&lt;body&gt;</p>
+            </div><br>
+            <h2>Step 2: That's it!</h2>
+            <p>
+                Congratulations, you now know the basics on Javascript. With this knowledge you 
+                can defend yourself on the world of web development.
+            </p>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="../front-end-menu.html">
+                Tutorials<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
 </body>
 </html>
