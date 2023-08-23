@@ -2,11 +2,11 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: linear-gradient(#f7df1e, #c9b100);
     font-size: 18px;
     font-family: "Raleway";
-    overflow: scroll;
+    overflow: hidden;
     color: #23232e;
     text-align: justify;
 }
@@ -21,11 +21,12 @@ h1 {
     margin-left: 20vw;
     padding: 20px;
     height: 100%;
+    overflow: scroll;
 }
 
 .content-section {
     margin: 10px;
-    height: 100%;
+    height: auto;
 }
 
 .file-type-style {
@@ -40,6 +41,7 @@ h1 {
     border: white 2px solid;
     border-radius: 5px;
     padding: 15px;
+    text-align: left;
 }
 
 .code-container p {
@@ -83,4 +85,21 @@ h1 {
 
 .next-chapter:hover i {
     color: #23232e;
+}
+
+button {
+    color: rgb(206, 206, 206);
+    font-size: 20px;
+    padding: 10px;
+    background-color: #1E36F7;
+    border: #1E36F7 2px solid;
+    border-radius: 5px;
+    box-shadow: 0px 3px 4px 0px rgb(94, 94, 94);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #1226bd;
+    border: #1226bd 2px solid;
+    text-decoration: underline;
 }
