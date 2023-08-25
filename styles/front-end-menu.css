@@ -5,6 +5,7 @@ body {
     height: 100vh;
     background: linear-gradient(#2965f1, #1949b9 100%);
     font-family: "Raleway";
+    overflow: hidden;
 }
 
 h1 {
@@ -17,6 +18,9 @@ h1 {
 
 .main-content {
     margin-left: 20vw;
+    padding: 20px;
+    height: 100%;
+    overflow: scroll;
 }
 
 .main-flex-container {

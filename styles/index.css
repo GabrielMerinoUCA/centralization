@@ -19,6 +19,23 @@ h1 {
     margin: 0;
 }
 
+.triangle {
+    position: fixed;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    width: 14vh;
+    height: 14vh;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: rgb(20, 20, 20);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.triangle:hover {
+    background-color: rgb(44, 44, 44);
+}
+
 .img-container {
     position: relative;
     height: 50%;
@@ -30,6 +47,7 @@ h1 {
     flex-wrap: wrap;
     flex-direction: row;
     height: 100%;
+    justify-content: center;
 }
 
 /* Front End*/
@@ -64,7 +82,7 @@ a:hover .right-aligned {
 }
 
 .front-end-header {
-    font-size: 60px;
+    font-size: 7.5vh;
     font-family: 'Montserrat';
 }
 
@@ -105,7 +123,7 @@ a:hover .wavy-thingy {
 }
 
 .back-end-header {
-    font-size: 78px;
+    font-size: 10vh;
     font-family: 'VT323';
     color: rgb(0, 192, 0);
 }

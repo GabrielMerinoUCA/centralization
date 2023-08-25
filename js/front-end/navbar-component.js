@@ -1,3 +1,5 @@
+/* THIS WILL NOT WORK BECAUSE OF PATHS, THERE IS NO WAY OF GETTING ROOT WITHOUT SSR */
+
 let body = document.getElementsByTagName("body")[0];
 let main = body.getElementsByTagName("main")[0];
 
