@@ -4,11 +4,6 @@ html {
     margin: 0;
 }
 
-img {
-    position: absolute;
-    opacity: 0.3;
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -17,6 +12,11 @@ a {
 
 h1 {
     margin: 0;
+}
+
+#binary-101 {
+    margin: 0;
+    color: rgb(31, 0, 51);
 }
 
 .triangle {
@@ -34,12 +34,6 @@ h1 {
 
 .triangle:hover {
     background-color: rgb(44, 44, 44);
-}
-
-.img-container {
-    position: relative;
-    height: 50%;
-    overflow: hidden;
 }
 
 .flex-container {
@@ -105,6 +99,8 @@ a:hover .wavy-thingy {
     height: 100%;
     flex-grow: 1;
     background-color: #371151;
+    font-family: 'VT323';
+    font-size: 4vh;
 }
 
 .back-end-panel:hover {
@@ -124,7 +120,6 @@ a:hover .wavy-thingy {
 
 .back-end-header {
     font-size: 10vh;
-    font-family: 'VT323';
     color: rgb(0, 192, 0);
 }
 
