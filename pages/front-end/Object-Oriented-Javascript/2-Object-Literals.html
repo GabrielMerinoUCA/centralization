@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css">
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <main class="main-content">
+        <h1>II. Object Literals</h1>
+        <div class="content-section">
+            <p>
+                We've already seen object literals on the Javascript Tutorials for Beginners (Chapter 27). We just called them
+                objects. Here's a quick refresh on the syntax:
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    let <span class="custom-dev-creation">
+                        userOne = {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            email: "john@gmail.com", <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            name: "John Doe",<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            login: <span class="language-feature">
+                                function() {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    console.log(this.<span class="custom-dev-creation">email</span>);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                }
+                            </span><br>
+                        }
+                    </span>
+                </p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">userOne.name</span>);</p>
+                <p class="custom-dev-creation">userOne.login();</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./3-Updating-Properties.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div><br><br>
+    </main>
+    <!-- NAVBAR COMPONENT -->
+    <script src="../../../js/front-end/navbar-component.js"></script>
 </body>
 </html>

@@ -7,6 +7,8 @@ html, body {
     height: 100vh;
     font-size: 18px;
     text-align: justify;
+    color: #23232e;
+    overflow: hidden;
 }
 
 h1 {
@@ -25,6 +27,7 @@ h1 {
 
 .content-section {
     margin: 10px;
+    height: auto;
 }
 
 .next-chapter-cheater {
@@ -46,4 +49,30 @@ h1 {
     border-color: #23232e;
     color: #23232e;
     background-color: rgb(206, 206, 206);
+}
+
+.file-type-style {
+    display: inline;
+    border-bottom: #23232e 2px solid;
+    margin-left: 5%;
+}
+
+.code-container{
+    background-color: #23232e;
+    margin: 0;
+    padding: 15px;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    text-align: left;
+}
+.code-container p{
+    margin: 0;
+}
+
+.language-feature {
+    color: #db0909;
+}
+
+.custom-dev-creation {
+    color: #224bff;
 }
