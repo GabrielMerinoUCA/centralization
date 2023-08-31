@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <main class="main-content">
+        <h1>V. Class Constructors</h1>
+        <div class="content-section">
+            <p>
+                Constructors in Javascript are a little bit different than some languages like Java, C or C#. Instead
+                of using the name of the class itself as the constructor, we use the 'constructor' keyword. In addition
+                to the 'constructor' keyword being an oddity, Javascript also is only capable of defining attributes
+                inside such keyword instead of outside like many other programming languages.
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    class <span class="custom-dev-creation">
+                        User { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="language-feature">
+                                constructor(<span class="custom-dev-creation">email, name</span>) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    this.<span class="custom-dev-creation">email = email;</span><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    this.<span class="custom-dev-creation">name = name;</span><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                }
+                            </span><br>
+                        }
+                    </span>
+                </p><br>
+                <p class="language-feature">let <span class="custom-dev-creation">user1 = </span> new 
+                    <span class="custom-dev-creation">User("john@gmail.com", "John Doe");</span>
+                </p>
+                <p class="language-feature">let <span class="custom-dev-creation">user2 = </span> new 
+                    <span class="custom-dev-creation">User("bob@gmail.com", "Bob Dom");</span>
+                </p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./6-Class-Methods.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="../../../js/front-end/Object-Oriented-Javascript/5-Class-Constructor.js"></script>
+    <!-- NAVBAR COMPONENT -->
+    <script src="../../../js/front-end/navbar-component.js"></script>
 </body>
 </html>
