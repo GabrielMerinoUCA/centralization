@@ -4,8 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+    <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <main class="main-content">
+        <h1>VIII. Class Inheritance</h1>
+        <div class="content-section">
+            <p>Javascript supports Inheritance like many other programming languages and is very similar to them syntax wise.</p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    class <span class="custom-dev-creation">
+                        User { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="language-feature">
+                                constructor(<span class="custom-dev-creation">email, name</span>) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    this.<span class="custom-dev-creation">email = email;</span><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    this.<span class="custom-dev-creation">name = name;</span><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                }
+                            </span><br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            login() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="language-feature">console.log(this.<span class="custom-dev-creation">email + " logged in"</span>);</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="language-feature">return this;</span>
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            } <br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            logout() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="language-feature">console.log(this.<span class="custom-dev-creation">email + " logged out"</span>);</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="language-feature">return this;</span>
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            } <br>
+                        }
+                    </span>
+                </p>
+                <p class="custom-dev-creation">
+                    <span class="language-feature">class</span> Admin <span class="language-feature">extends </span>User {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    deleteUser(user, users) {<br>
+                        <span class="language-feature">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            for(let <span class="custom-dev-creation">i = 0; i &lt; users.</span>length; <span class="custom-dev-creation">i++</span>) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                if(<span class="custom-dev-creation">user = user[i]</span>) {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="comment">// delete 1 element after index 'i' (could be more) </span> <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="custom-dev-creation">users.</span>splice(<span class="custom-dev-creation">i, 1</span>) <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    
+                                }<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                            }
+                        </span>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    } <br>
+                }
+                </p>
+                <br>
+                <p class="language-feature">
+                    let <span class="custom-dev-creation">users = </span>
+                    [new<span class="custom-dev-creation">User("john@gmail.com", "John Doe"),</span>
+                    new <span class="custom-dev-creation">User("anthony@gmail.com", "Anthony Dubois")</span>];
+                </p>
+                <p class="language-feature">
+                    let <span class="custom-dev-creation">admin1 = </span>new <span class="custom-dev-creation">Admin("maximus@gmail.com", "Maximus Optimus");</span>
+                </p>
+                <br>
+                <p class="comment">// Javascript sends all arguments by reference so you can change the origin this way</p>
+                <p class="custom-dev-creation">admin1.deleteUser(users[0], users);</p>
+                <p class="comment">// John Doe got deleted from the array</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./9-Constructors-(Under-the-hood).html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div><br><br>
+    </main>
+    <script src="../../../js/front-end/Object-Oriented-Javascript/8-Class-Inheritance.js"></script>
+    <!-- NAVBAR COMPONENT -->
+    <script src="../../../js/front-end/navbar-component.js"></script>
 </body>
 </html>
