@@ -19,7 +19,51 @@
 </head>
 <body>
     <main class="main-content">
-
+        <h1>IV. Spread operator</h1>
+        <div class="content-section">
+            <p>The spread operator allows us to extract the elements of an array into a single entity.</p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">array = ["John", "Monroe", "Doever"];</span>
+                </p>
+                <p class="comment">// Will print "John Monroe Doever" instead of ["John", "Monroe", "Doever"]</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">...array</span> );</p>
+            </div>
+            <p>
+                The spread operator can be useful whenever you want to add an array into another array without
+                it storing the "Array" as an item but instead the individual items.
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">nums1 = [1,2,3];</span>
+                </p>
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">nums2 = [...nums1,4,5,6];</span>
+                </p>
+                <p class="comment">// will print 1 2 3 4 5 6 instead of [Array, 4, 5, 6]</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">nums2</span> );</p>
+            </div>
+            <p>
+                Another application of the spread operator is to use an array directly on a function that expects
+                multiple arguments
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">array = [3,5,7];</span></p>
+                <p class="language-feature">function <span class="custom-dev-creation">addNums(a,b,c) {</span></p>
+                &ensp;<span class="language-feature">console.log(<span class="custom-dev-creation">a+b+c</span>);</span>
+                <p class="custom-dev-creation">}</p>
+                <p class="comment">// the array will spread on 3 items that will be passed to the corresponding argurment</p>
+                <p class="custom-dev-creation">addNums(...array)</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./5-Template-Strings.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div><br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>
