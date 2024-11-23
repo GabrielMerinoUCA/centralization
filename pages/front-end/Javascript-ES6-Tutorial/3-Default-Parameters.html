@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Javascript</title>
-        <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css">
-        <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
-            rel="stylesheet">
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css">
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <body>
     <main class="main-content">
-        
+        <h1>III. Default parameters</h1>
+        <div class="content-section">
+            <p>
+                In Javascript, not sending arguments to a function can result in unexpected behavior but no
+                error necessarily. Something we can do to avoid unexpected behavior is give the functions' parameters
+                have default values.
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">function <span class="custom-dev-creation">myFun(num = 45) {</span></p>
+                &ensp;<span class="language-feature">console.log(<span class="custom-dev-creation">num</span> );</span>
+                <p class="custom-dev-creation">}</p>
+                <p class="comment">// will print 45 </p>
+                <p class="custom-dev-creation">myFun();</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./4-Spread-Operator.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div>
+        <br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>
