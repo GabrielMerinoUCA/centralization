@@ -19,7 +19,34 @@
 </head>
 <body>
     <main class="main-content">
-
+        <h1>VI. Object literals enhancements</h1>
+        <div class="content-section">
+            <p>
+                We know that in Javascript, object literals have the ability to pair their keys with an external variable
+                and automatically reference the value of such variable as well as the ability to contain methods within.
+                However, the old syntax is quite antiquated and there is a better way of doing it.
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">name = "John";</span></p>
+                <p class="language-feature">let <span class="custom-dev-creation">belt = "white";</span></p>
+                <p class="language-feature">let <span class="custom-dev-creation">ninja = {</span></p>
+                &ensp;<span class="comment">// Doesn't require "name: name" anymore but is inferred</span><br>
+                &ensp;<span class="custom-dev-creation">name, belt,</span><br>
+                &ensp;<span class="comment">// Doesn't require assignation of anonymous function anymore</span><br>
+                &ensp;<span class="custom-dev-creation">chop(x) {</span><br>
+                &ensp;&ensp;<span class="language-feature">
+                    console.log(<span class="custom-dev-creation">`Chopped the enemy ${x} times!`</span>);
+                </span><br>
+                &ensp;<span class="custom-dev-creation">}</span><br>
+                <p class="custom-dev-creation">}</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./7-New-String-Methods.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div><br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>
