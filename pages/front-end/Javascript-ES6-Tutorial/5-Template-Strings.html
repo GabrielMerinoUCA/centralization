@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Javascript</title>
-        <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css">
-        <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
-            rel="stylesheet">
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css">
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <body>
     <main class="main-content">
-        
+        <h1>V. Template Strings</h1>
+        <div class="content-section">
+            <p>
+                Template strings are special type of writing strings that allows for line breaks inside the string
+                to be accounted without the need for a break character and also allow us to interpolate variables
+                without the need for concatenation.
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">function <span class="custom-dev-creation">logUser(name, age) {</span> </p>
+                &ensp;<span class="language-feature">console.log(</span><br>
+                &ensp;&ensp;<span class="custom-dev-creation">`My name is ${name}</span><br>
+                &ensp;&ensp;<span class="custom-dev-creation">and my age is ${age}`</span><br>
+                &ensp;<span class="language-feature">);</span>
+                <p class="custom-dev-creation">}</p>
+                <p class="comment">// Will print:</p>
+                <p class="comment">/* My name is John <br>and my age is 28*/</p>
+                <p class="custom-dev-creation">logUser("John", 28);</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./6-Object-Literals-Enhancements.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div><br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>
