@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+    <link rel="stylesheet" href="../../../styles/Object-Oriented-Javascript/Object-Oriented-Javascript-Template.css">
+    <link rel="stylesheet" href="../../../styles/front-end-navbar.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+    <main class="main-content">
+        <h1>II. Constants</h1>
+        <div class="content-section">
+            <p>We know what constants are. Just to give a refresh on when and how to use them, just remember:</p>
+            <ol>
+                <li>Make them global</li>
+                <li>Make them descriptive</li>
+                <li>Name them using all caps with snake case (MY_CONST)</li>
+                <li>Use them to avoid magic numbers (like 3.14, what does that mean? well of course, 'pi')</li>
+            </ol>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">
+                    const <span class="custom-dev-creation">PI = 3.14;</span>
+                </p>
+                <p class="comment">
+                    // Naturally, if you try to assign a new value after 
+                    the declaration, JS will return an error
+                </p>
+            </div>
+            <p>Be careful since as we know by now, JS always has some funky business to watch out for</p>
+            <div class="code-container">
+                <p class="language-feature">const <span class="custom-dev-creation">PI = 3.14;</span></p>
+                <p class="language-feature">function <span class="custom-dev-creation">calcArea(r) {</span></p>
+                &emsp;<span class="language-feature">const <span class="custom-dev-creation">PI = 10;</span></span><br>
+                &emsp;<span class="language-feature">console.log(
+                    <span class="custom-dev-creation">PI * r * r</span>);
+                </span>
+                <p class="custom-dev-creation">}</p>
+                <p class="comment">// Will return 250 instead of the expected value</p>
+                <p class="custom-dev-creation">calcArea(10);</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./3-Default-Parameters.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div><br><br>        
+    </main>
+    <!-- NAVBAR COMPONENT -->
+    <script src="../../../js/front-end/navbar-component.js"></script>
 </body>
+
 </html>
