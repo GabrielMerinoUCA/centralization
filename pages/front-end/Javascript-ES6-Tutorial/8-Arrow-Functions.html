@@ -19,7 +19,57 @@
 </head>
 <body>
     <main class="main-content">
-        
+        <h1>VIII. Arrow functions</h1>
+        <div class="content-section">
+            <p>Arrow function is a new way to create anonymous functions in Javascript.</p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">myFunc = () => {</span></p>
+                &ensp;<span class="language-feature">console.log(<span class="custom-dev-creation">"Hello world"</span>);</span><br>
+                <p class="custom-dev-creation">}</p><br>
+                <p class="comment">// Prints hello world</p>
+                <p class="custom-dev-creation">myFunc();</p>
+            </div><br>
+            <p>
+                Using arrow functions brings an advantage when compared to traditional anonymous functions.
+                For instance, given the following code:
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">user = {</span></p>
+                &ensp;<span class="custom-dev-creation">name: "John",</span><br>
+                &ensp;<span class="custom-dev-creation">chop(x) {</span><br>
+                &ensp;&ensp;<span class="language-feature">window.setInterval(function() {<br>
+                &ensp;&ensp;&ensp;if(<span class="custom-dev-creation">x>5</span>) {<br>
+                &ensp;&ensp;&ensp;&ensp;<span class="comment">// won't print name beacause "this" is referencing the function object and not the object literal</span><br>
+                &ensp;&ensp;&ensp;&ensp;console.log(<span class="custom-dev-creation">`${this.name} chopped ${x} times`</span>);<br>
+                &ensp;&ensp;&ensp;&ensp;<span class="custom-dev-creation">x--;</span><br>
+                &ensp;&ensp;&ensp;} <br>
+                &ensp;&ensp;});</span> <br>
+                &ensp;<span class="custom-dev-creation">}</span>
+            </div><br>
+            <p>The arrow function solves this issue without further complications</p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">user = {</span></p>
+                &ensp;<span class="custom-dev-creation">name: "John",</span><br>
+                &ensp;<span class="custom-dev-creation">chop(x) {</span><br>
+                &ensp;&ensp;<span class="language-feature">window.setInterval(() => {<br>
+                &ensp;&ensp;&ensp;if(<span class="custom-dev-creation">x>5</span>) {<br>
+                &ensp;&ensp;&ensp;&ensp;<span class="comment">// Will now reference the object literal thus printing the name</span><br>
+                &ensp;&ensp;&ensp;&ensp;console.log(<span class="custom-dev-creation">`${this.name} chopped ${x} times`</span>);<br>
+                &ensp;&ensp;&ensp;&ensp;<span class="custom-dev-creation">x--;</span><br>
+                &ensp;&ensp;&ensp;} <br>
+                &ensp;&ensp;});</span> <br>
+                &ensp;<span class="custom-dev-creation">}</span>
+            </div><br>
+        </div>
+        <div class="next-chapter-cheater">
+            <a class="next-chapter" href="./9-Sets.html">
+                Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+            </a>
+        </div>
+        <br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>
