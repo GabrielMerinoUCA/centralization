@@ -19,7 +19,60 @@
 </head>
 <body>
     <main class="main-content">
+        <h1>IX. Sets</h1>
+        <h2>9.1. Basics of the Set structure</h2>
+        <div class="content-section">
+            <p>Sets are a data structure similar to arrays that prevents storage of duplicates</p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">mySet = </span>new Set();</p>
+                <p class="custom-dev-creation">
+                    mySet.<span class="language-feature">add(<span class="custom-dev-creation">"John"</span>).add(<span class="custom-dev-creation">"Rick"</span>).add(<span class="custom-dev-creation">"John"</span>);</span>
+                </p><br>
+                <p class="comment">// Will print "John", "Rick" without repeating John a second time</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">mySet</span>);</p><br>
+                <p class="comment">// Just like any other data structure, there is a method to visualize the amount of elements inside it</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">mySet</span>.size);<span class="comment">// prints 2</span></p><br>
+                
+                <p class="comment">// If there is the ability to add, then there also is the ability to remove. The method returns a bool btw</p>
+                <p class="custom-dev-creation">mySet.<span class="language-feature">delete(<span class="custom-dev-creation">"John"</span>);</span></p><br>
+                <p class="comment">// Will now only print "Rick"</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">mySet</span>);</p><br>
 
+                <p class="comment">// This method checks if an element exists within the set</p>
+                <p class="custom-dev-creation">mySet.<span class="language-feature">has(<span class="custom-dev-creation">"Rick"</span>);</span><span class="comment">// will return true;</span></p><br>
+
+                <p class="comment">// Delete all contents of the set</p>
+                <p class="custom-dev-creation">mySet.<span class="language-feature">clear();</span></p>                
+            </div><br>
+        </div>
+        <h2>9.2. Convert arrays with duplicates to set without duplicates</h2>
+        <div class="content-section">
+            <p>
+                It's possible to convert a massive array of items that might have duplicated items into a set
+                that removes such duplicates
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let 
+                    <span class="custom-dev-creation">array = [
+                        "John", "Rick", "Doever", "Pepe", "John", "Doever"
+                        ];
+                    </span>
+                </p>
+                <p class="language-feature">
+                    let <span class="custom-dev-creation">mySet = </span>new Set(<span class="custom-dev-creation">array</span>);
+                </p><br>
+                <p class="comment">// Prints "John", "Rick", "Doever", "Pepe"</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">mySet</span>);</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./10-Generators.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div>
+        <br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>

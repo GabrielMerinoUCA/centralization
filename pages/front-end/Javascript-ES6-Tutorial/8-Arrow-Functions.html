@@ -24,7 +24,7 @@
             <p>Arrow function is a new way to create anonymous functions in Javascript.</p>
             <p class="file-type-style">main.js</p><br><br>
             <div class="code-container">
-                <p class="language-feature">let <span class="custom-dev-creation">myFunc = () => {</span></p>
+                <p class="language-feature">let <span class="custom-dev-creation">myFunc = () =&gt; {</span></p>
                 &ensp;<span class="language-feature">console.log(<span class="custom-dev-creation">"Hello world"</span>);</span><br>
                 <p class="custom-dev-creation">}</p><br>
                 <p class="comment">// Prints hello world</p>
@@ -40,8 +40,8 @@
                 &ensp;<span class="custom-dev-creation">name: "John",</span><br>
                 &ensp;<span class="custom-dev-creation">chop(x) {</span><br>
                 &ensp;&ensp;<span class="language-feature">window.setInterval(function() {<br>
-                &ensp;&ensp;&ensp;if(<span class="custom-dev-creation">x>5</span>) {<br>
-                &ensp;&ensp;&ensp;&ensp;<span class="comment">// won't print name beacause "this" is referencing the function object and not the object literal</span><br>
+                &ensp;&ensp;&ensp;if(<span class="custom-dev-creation">x&gt;5</span>) {<br>
+                &ensp;&ensp;&ensp;&ensp;<span class="comment">// won't print name because "this" is referencing the function object and not the object literal</span><br>
                 &ensp;&ensp;&ensp;&ensp;console.log(<span class="custom-dev-creation">`${this.name} chopped ${x} times`</span>);<br>
                 &ensp;&ensp;&ensp;&ensp;<span class="custom-dev-creation">x--;</span><br>
                 &ensp;&ensp;&ensp;} <br>
@@ -54,8 +54,8 @@
                 <p class="language-feature">let <span class="custom-dev-creation">user = {</span></p>
                 &ensp;<span class="custom-dev-creation">name: "John",</span><br>
                 &ensp;<span class="custom-dev-creation">chop(x) {</span><br>
-                &ensp;&ensp;<span class="language-feature">window.setInterval(() => {<br>
-                &ensp;&ensp;&ensp;if(<span class="custom-dev-creation">x>5</span>) {<br>
+                &ensp;&ensp;<span class="language-feature">window.setInterval(() =&gt; {<br>
+                &ensp;&ensp;&ensp;if(<span class="custom-dev-creation">x&gt;5</span>) {<br>
                 &ensp;&ensp;&ensp;&ensp;<span class="comment">// Will now reference the object literal thus printing the name</span><br>
                 &ensp;&ensp;&ensp;&ensp;console.log(<span class="custom-dev-creation">`${this.name} chopped ${x} times`</span>);<br>
                 &ensp;&ensp;&ensp;&ensp;<span class="custom-dev-creation">x--;</span><br>
