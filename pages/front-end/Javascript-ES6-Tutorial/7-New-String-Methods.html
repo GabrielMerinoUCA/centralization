@@ -19,7 +19,94 @@
 </head>
 <body>
     <main class="main-content">
-        
+        <h1>VII. New string methods</h1>
+        <div class="content-section">
+            <p>
+                Javascript added a bunch of new methods including string methods. This methods can be 
+                useful tools in certain scenarios so it could be worth being aware of them.
+            </p>
+        </div>
+        <h2>7.1. Repeat method</h2>
+        <div class="content-section">
+            <p>
+                The first string method is called "repeat". It uses the assigned string and returns copies
+                of it which numbers we can specify
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">myString = "What ";</span></p>
+                <p class="comment">// will print "What What What What What"</p>
+                <p class="language-feature">console.log(
+                    <span class="custom-dev-creation">myString.</span>repeat(5)
+                );</p>
+            </div>
+        </div>
+        <h2>7.2. startsWith method</h2>
+        <div class="content-section">
+            <p>
+                The "startsWith" method checks if the string starts with a specific sequence of characters
+                from a specific index and returns a boolean with the corresponding validation
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">myString = "goodbye";</span></p>
+                <p class="comment">
+                    /* <br> 
+                    will print "true" <br>
+                    arg1: string to validate <br>
+                    arg2: index to start from (first is 0) <br>
+                    */
+                </p>
+                <p class="language-feature">console.log(
+                    <span class="custom-dev-creation">myString.</span>startsWith(
+                        <span class="custom-dev-creation">"good", 4</span>
+                        )
+                );</p>
+            </div>
+        </div>
+        <h2>7.3. endsWith method</h2>
+        <div class="content-section">
+            <p>
+                Similarly to "startsWith", "endsWith" is a method that checks if the string ends with a
+                specific sequence of characters from a specific index and if it does, will return a 
+                boolean with the corresponding validation.
+            </p>
+            <p class="file-type-style">main.js</p> <br><br>
+            <div class="code-container">
+                <p class="language-feature">let <span class="custom-dev-creation">myString = "goodbye";</span></p>
+                <p class="comment">
+                    /* <br> 
+                    will print "true" <br>
+                    arg1: string to validate <br>
+                    arg2: index to start from (first is 0) <br>
+                    */
+                </p>
+                <p class="language-feature">console.log(
+                    <span class="custom-dev-creation">myString.</span>endsWith(
+                        <span class="custom-dev-creation">"good", 4</span>
+                        )
+                );</p>
+            </div>
+        </div>
+        <h2>7.4. include method</h2>
+        <div class="content-section">
+            <p>The "include" method checks if the sent string exists in the main string.</p>
+            <p class="file-type-style">main.js</p> <br><br>
+            <div class="code-container">
+                <!--Went to the grave to get this dead meme-->
+                <p class="language-feature">let <span class="custom-dev-creation">myString = "My name is Jeff";</span></p>
+                <p class="comment">// will print "true"</p>
+                <p class="language-feature">console.log(
+                    <span class="custom-dev-creation">myString.</span>includes(<span class="custom-dev-creation">"name"</span>)
+                );</p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="./8-Arrow-Functions.html">
+                    Next chapter<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div>
+        <br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>
