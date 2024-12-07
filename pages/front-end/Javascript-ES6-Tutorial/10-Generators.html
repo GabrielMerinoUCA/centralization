@@ -16,10 +16,120 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../../js/front-end/Javascript-ES6-Tutorials/10-Generators.js"></script>
 </head>
 <body>
     <main class="main-content">
-
+        <h1>X. Generators</h1>
+        <h2>10.1. What are generators and how do they work?</h2>
+        <div class="content-section">
+            <p>
+                Generators are a way of creating functions with special characteristics such as the capability of
+                pausing and playing a function which can help us to control the flow of our program. Let's see how
+                that works
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="comment">// Add an asterisk before the declaration like a pointer on C</p>
+                <p class="language-feature">function <span class="custom-dev-creation">*gen() {</span></p>
+                <p class="language-feature">
+                    &ensp;console.log(<span class="custom-dev-creation">"Hello world"</span>);<br>
+                    &ensp;console.log(<span class="custom-dev-creation">"Goodbye world"</span>);
+                </p>
+                <p class="custom-dev-creation">}</p><br>
+                <p class="comment">
+                    /* When calling the function, it won't execute its code but instead return an iterator 
+                    that we can iterate through using the next method. We say that we are "setting it up".
+                    What will we be iterating through? well, the inner code */
+                </p>
+                <p class="language-feature">let <span class="custom-dev-creation">myGen = gen();</span></p><br>
+                <p class="comment">// Will print Hello world and Goodbye world</p>
+                <p class="custom-dev-creation">myGen.<span class="language-feature">next()</span>;</p>
+            </div>
+            <p>
+                Alright that's cool and all but so far, this behaves just like any other function. How do we pause
+                and continue the iteration of specific pieces of code? For that, we need to use a new keyword
+                called "yield"
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">function <span class="custom-dev-creation">*gen() {</span></p>
+                <p class="comment">
+                    &ensp;// JS reads from right to left so it will essentially execute the whole line and then
+                    pause at "yield"
+                </p>
+                <p class="language-feature">
+                    &ensp;yield console.log(<span class="custom-dev-creation">"Hello world"</span>);<br>
+                    &ensp;console.log(<span class="custom-dev-creation">"Goodbye world"</span>);
+                </p>
+                <p class="custom-dev-creation">}</p><br>
+                <p class="language-feature">let <span class="custom-dev-creation">myGen = gen();</span></p><br>
+                <p class="comment">// Will print Hello world only.</p>
+                <p class="custom-dev-creation">myGen.<span class="language-feature">next()</span>;</p>
+                <p class="comment">// then use the "next" method again to continue</p>
+                <p class="custom-dev-creation">myGen.<span class="language-feature">next()</span>;</p>
+            </div>
+        </div>
+        <h2>10.2. Yielding</h2>
+        <div class="content-section">
+            <p>
+                What we mean by yielding is that the code that runs before encountering a yield will be returned
+                when running the "next" method
+            </p>
+            <div class="code-container">
+                <p class="language-feature">function <span class="custom-dev-creation">*gen() {</span></p>
+                    <p class="comment">
+                        &ensp;// what will happen here is that everything before the yield keyword will be returned on 
+                        the "next" method as an object
+                    </p>
+                    <p class="language-feature">
+                        &ensp;yield <span class="custom-dev-creation">"Hello world";</span><br>
+                        &ensp;yield <span class="custom-dev-creation">"Goodbye world";</span><br>
+                        <span class="comment">&ensp;
+                            // if you want anything not yielded to be accessed via the next method as well, use the return keyword
+                        </span><br>
+                        &ensp;return <span class="custom-dev-creation">"All done";</span>
+                    </p>
+                    <p class="custom-dev-creation">}</p>
+                    <p class="language-feature">let <span class="custom-dev-creation">myGen = gen();</span></p><br>
+                    <p class="language-feature">console.log(<span class="custom-dev-creation">myGen.</span>next());<span class="comment">// print Hello world</span></p>
+                    <p class="language-feature">console.log(<span class="custom-dev-creation">myGen.</span>next());<span class="comment">// print Goodbye world</span></p>
+                    <p class="language-feature">console.log(<span class="custom-dev-creation">myGen.</span>next());<span class="comment">// print All done</span></p>
+                </div>
+        </div>
+        <h2>10.3. Send arguments via yields</h2>
+        <div class="content-section">
+            <p>
+                This might as well be an anti-pattern but it might still have some use cases. It is possible to send
+                data to the generator function using the "next" method.
+            </p>
+            <p class="file-type-style">main.js</p><br><br>
+            <div class="code-container">
+                <p class="language-feature">function <span class="custom-dev-creation">*gen() {</span></p>
+                <p class="language-feature">
+                    &ensp;let <span class="custom-dev-creation">x</span> = yield <span class="custom-dev-creation">"Hello world";</span><br>
+                    &ensp;let <span class="custom-dev-creation">y</span> = yield <span class="custom-dev-creation">"Goodbye world";</span><br>
+                    &ensp;return <span class="custom-dev-creation">x + y;</span>
+                </p>
+                <p class="custom-dev-creation">}</p>
+                <p class="language-feature">let <span class="custom-dev-creation">myGen = gen();</span></p><br>
+                <p class="comment">
+                    /* The first one doesn't require args because the argument is sent directly to 
+                    the "yield" keyword and then taken to the variable */
+                </p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">myGen.</span>next());</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">myGen.</span>next(10));</p>
+                <p class="language-feature">console.log(<span class="custom-dev-creation">myGen.</span>next(5));
+                    <span class="comment">// print 15</span>
+                </p>
+            </div><br>
+            <div class="next-chapter-cheater">
+                <a class="next-chapter" href="../front-end-menu.html">
+                    Tutorials<i class="fa-solid fa-sort-up fa-rotate-90"></i>
+                </a>
+            </div>
+        </div>
+        <br><br>
     </main>
     <!-- NAVBAR COMPONENT -->
     <script src="../../../js/front-end/navbar-component.js"></script>
